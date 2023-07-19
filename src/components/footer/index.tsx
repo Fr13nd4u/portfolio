@@ -7,6 +7,6 @@ export const Footer: React.FC = () => {
 
 const FooterWrap = styled.footer`
   width: 100%;
-  height: 10vh;
+  min-height: 10vh;
   background: #aaefdf;
 `;

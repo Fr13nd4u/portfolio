@@ -7,6 +7,6 @@ export const About: React.FC = () => {
 
 const AboutWrap = styled.section`
   width: 100%;
-  height: 80vh;
+  min-height: 80vh;
   // background: #aaefdf;
 `;

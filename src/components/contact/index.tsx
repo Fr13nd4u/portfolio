@@ -7,6 +7,6 @@ export const Contact: React.FC = () => {
 
 const ContactWrap = styled.section`
   width: 100%;
-  height: 80vh;
+  min-height: 80vh;
   // background: #63c132;
 `;

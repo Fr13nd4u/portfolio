@@ -30,5 +30,4 @@ export const App: React.FC = () => {
 
 const Main = styled.main`
   background-color: ${theme.main.colors.bg};
-  // background: linear-gradient(62deg, #ff5722 0%, #f7ce68 100%);
 `;

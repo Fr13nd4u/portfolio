@@ -4,10 +4,11 @@ import { theme } from "../../styles/theme";
 
 interface ILink {
   children: React.ReactNode;
-  variant: "primary" | "secondary";
+  variant: "outline" | "primary" | "secondary";
   href?: string;
   download?: boolean;
   disable?: boolean;
+  target?: string;
 }
 
 export const Link: React.FC<ILink> = ({ children, variant, ...props }) => {
@@ -23,17 +24,24 @@ const LinkWrap = styled.a<ILink>`
   border-radius: 50px;
 
   ${(p) => {
-    if (p.variant === "primary") {
-      return `
-        color: ${theme.main.colors.white};
-        background: ${theme.main.colors.secondary};
-        border: 1px solid ${theme.main.colors.secondary};
-      `;
-    } else {
-      return `
-        color: ${theme.main.colors.secondary};
-        border: 1px solid ${theme.main.colors.secondary};
-      `;
+    switch (p.variant) {
+      case "primary":
+        return `
+          color: ${theme.main.colors.white};
+          background: ${theme.main.colors.secondary};
+          border: 1px solid ${theme.main.colors.secondary};
+        `;
+
+      case "secondary":
+        return `
+          color: ${theme.main.colors.secondary};
+          border: 1px solid ${theme.main.colors.secondary};
+        `;
+
+      default:
+        return `
+          color: ${theme.main.colors.secondary};
+        `;
     }
   }}
 `;

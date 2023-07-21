@@ -9,7 +9,7 @@ export const CTA: React.FC = () => {
       <Link variant="primary" href={CV} download>
         Download CV
       </Link>
-      <Link variant="secondary" href="">
+      <Link variant="secondary" href="#contact">
         Contact me
       </Link>
     </Wrap>

@@ -47,10 +47,11 @@ const Scroll = styled(Link)`
   display: none;
 
   ${media.md`
+    font-weight: 300;
     display: block;
     position: absolute;
     right: -1.3rem;
-    bottom:3.5rem;
+    bottom: 5.5rem;
     transform: rotate(90deg);
   `}
 `;

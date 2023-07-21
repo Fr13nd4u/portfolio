@@ -1,11 +1,12 @@
 // green 
+
 // const colors = {
 //   white: '#fff',
 //   text: '#333',
 //   bg: '#fcfaef',
 //   primary: '#d8e267',
 //   secondary: '#035a53',
-//   tertiary: '#E67E22',
+//   tertiary: '#035a53',
 // }
 
 const colors = {
@@ -18,7 +19,8 @@ const colors = {
 }
 
 const gradients = {
-  primary: `linear-gradient(${colors.primary} 15%, transparent)`
+  primary: `linear-gradient(${colors.primary} 15%, transparent)`,
+  tertiary_2: colors.tertiary + '1f',
 }
 
 const shadows = {}

@@ -9,6 +9,7 @@ interface ILink {
   download?: boolean;
   disable?: boolean;
   target?: string;
+  onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
 export const Link: React.FC<ILink> = ({ children, variant, ...props }) => {

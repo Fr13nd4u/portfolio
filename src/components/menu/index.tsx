@@ -7,20 +7,50 @@ import { FaLaptopCode } from "react-icons/fa";
 import { BiSolidMessageDetail } from "react-icons/bi";
 import { theme } from "../../styles/theme";
 import { media } from "../../styles/mixins";
+import { useMenuWithIntersection } from "./hooks/useMenuWithIntersection";
 
 export const Menu: React.FC = () => {
+  const activeNav = useMenuWithIntersection();
+
+  const handleClick = (e: React.SyntheticEvent<HTMLAnchorElement>) => {
+    const sectionId = e.currentTarget.getAttribute("href");
+
+    if (sectionId) {
+      const section = document.querySelector(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
   return (
     <MenuWrap id="menu">
-      <Link href="#hero">
+      <Link
+        href="#hero"
+        onClick={(e) => handleClick(e)}
+        className={activeNav === "#hero" ? "active" : ""}
+      >
         <HiMiniHome />
       </Link>
-      <Link href="#about">
+      <Link
+        href="#about"
+        onClick={(e) => handleClick(e)}
+        className={activeNav === "#about" ? "active" : ""}
+      >
         <BsFillPersonLinesFill />
       </Link>
-      <Link href="#projects">
+      <Link
+        href="#projects"
+        onClick={(e) => handleClick(e)}
+        className={activeNav === "#projects" ? "active" : ""}
+      >
         <FaLaptopCode />
       </Link>
-      <Link href="#contact">
+      <Link
+        href="#contact"
+        onClick={(e) => handleClick(e)}
+        className={activeNav === "#contact" ? "active" : ""}
+      >
         <BiSolidMessageDetail />
       </Link>
     </MenuWrap>
@@ -29,12 +59,12 @@ export const Menu: React.FC = () => {
 
 const MenuWrap = styled.menu`
   display: flex;
-  gap: 0.8rem;
+  gap: 1.4rem;
   width: max-content;
   padding: 0.7rem 1.7rem;
 
   backdrop-filter: blur(15px);
-  background: ${theme.main.gradients.tertiary_2};
+  background: ${theme.main.opacities.tertiary_light};
   border-radius: 50px;
 
   position: fixed;
@@ -60,8 +90,16 @@ const Link = styled.a`
   font-size: 1.1rem;
   width: 50px;
   height: 50px;
+  transition: 0.3s;
 
   &:hover {
-    background: ${theme.main.gradients.tertiary_2};
+    background: ${theme.main.opacities.tertiary_dark};
+    color: ${theme.main.colors.bg};
+    transition: 0.3s;
+  }
+
+  &.active {
+    background: ${theme.main.colors.primary};
+    color: ${theme.main.colors.bg};
   }
 `;

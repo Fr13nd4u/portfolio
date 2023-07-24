@@ -20,7 +20,11 @@ const colors = {
 
 const gradients = {
   primary: `linear-gradient(${colors.primary} 15%, transparent)`,
-  tertiary_2: colors.tertiary + '1f',
+}
+
+const opacities = {
+  tertiary_light: colors.tertiary + '1f',
+  tertiary_dark: colors.tertiary + '80',
 }
 
 const shadows = {}
@@ -29,4 +33,5 @@ export const main = {
 	colors,
 	shadows,
   gradients,
+  opacities
 };

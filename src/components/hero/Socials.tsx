@@ -51,6 +51,10 @@ const SocialsWrap = styled.ul`
   justify-content: center;
   margin-top: 2rem;
 
+  li a {
+    font-size: 1.25rem;
+  }
+
   ${media.md`
     ${() => css`
       flex-direction: column;

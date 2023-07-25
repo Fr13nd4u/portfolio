@@ -13,10 +13,10 @@ export const App: React.FC = () => {
       <Main>
         <Container>
           <Hero />
-          <About />
-          <Projects />
-          <Contact />
         </Container>
+        <About />
+        <Projects />
+        <Contact />
       </Main>
       <Footer />
     </>

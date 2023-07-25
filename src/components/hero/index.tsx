@@ -2,9 +2,10 @@ import * as React from "react";
 import styled from "styled-components";
 
 import { CTA } from "./CTA";
-import img_me from "../../assets/me.png";
 import { Link } from "../shared/Link";
 import { Socials } from "./Socials";
+
+import img_me from "../../assets/me.png";
 import { theme } from "../../styles/theme";
 import { media } from "../../styles/mixins";
 

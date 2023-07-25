@@ -20,14 +20,20 @@ const colors = {
 
 const gradients = {
   primary: `linear-gradient(${colors.primary} 15%, transparent)`,
+  blob: `linear-gradient(180deg, ${colors.primary} 31.77%, ${colors.secondary} 100%)`,
 }
 
 const opacities = {
+  secondary_dark: colors.secondary + '80',
   tertiary_light: colors.tertiary + '1f',
   tertiary_dark: colors.tertiary + '80',
 }
 
-const shadows = {}
+const shadows = {
+  blob: `inset 0 0 0 5px rgba(0, 0, 0, 0.6),
+  inset 100px 100px 0 0px ${colors.primary}, inset 200px 200px 0 0px ${colors.secondary},
+  inset 300px 300px 0 0px ${colors.tertiary}`,
+}
 
 export const main = {
 	colors,

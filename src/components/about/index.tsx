@@ -5,7 +5,7 @@ import img_me from "../../assets/me.png";
 import { theme } from "../../styles/theme";
 import { media } from "../../styles/mixins";
 import { Container } from "../shared/Container";
-import { CardsBox } from "./CardsBox";
+import { AboutCardContainer } from "./AboutCardContainer";
 
 export const About: React.FC = () => {
   return (
@@ -19,10 +19,10 @@ export const About: React.FC = () => {
           <Blob />
           <ContentBody>
             <p>
-              I am a passionate and skilled front-end developer based in
-              Zhytomyr, Ukraine. My expertise lies in crafting engaging and
-              user-friendly web applications using a variety of cutting-edge
-              technologies.
+              In addition to being a passionate and skilled front-end developer
+              based in Zhytomyr, Ukraine, I have two years of professional
+              experience in crafting engaging and user-friendly web applications
+              using cutting-edge technologies.
             </p>
             <p>
               With a strong foundation in HTML, CSS, and JavaScript, I have
@@ -34,7 +34,7 @@ export const About: React.FC = () => {
               experiences.
             </p>
 
-            <CardsBox />
+            <AboutCardContainer />
           </ContentBody>
         </Content>
       </Container>
@@ -124,7 +124,7 @@ const Blob = styled.div`
   width: 26rem;
 
   background: ${theme.main.gradients.blob};
-  mix-blend-mode: darken;
+  mix-blend-mode: exclusion;
   transition: 1s cubic-bezier(0.07, 0.8, 0.16, 1);
 
   transform: translate(10px, 650px) rotate(-90deg);

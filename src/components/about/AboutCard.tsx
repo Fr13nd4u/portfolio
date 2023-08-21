@@ -7,7 +7,7 @@ interface ICard {
   children?: React.ReactNode;
 }
 
-export const Card: React.FC<ICard> = ({ title, children }) => {
+export const AboutCard: React.FC<ICard> = ({ title, children }) => {
   return (
     <CardWrap>
       <h3>{title}</h3>
@@ -22,21 +22,24 @@ const CardWrap = styled.div`
   background: ${theme.main.opacities.tertiary_light};
   backdrop-filter: blur(15px);
 
-  text-align: left;
+  text-align: center;
   z-index: 1;
 
   h3 {
+    text-align: center;
     font-size: 1.5rem;
     font-weight: 500;
     color: ${theme.main.colors.secondary};
   }
 
   h5 {
+    text-align: center;
     font-size: 1rem;
     font-weight: 600;
   }
 
   p {
+    text-align: center !important;
     font-size: 0.9rem !important;
     line-height: 1.1 !important;
   }

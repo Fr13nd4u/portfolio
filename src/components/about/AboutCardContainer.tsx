@@ -1,7 +1,6 @@
 import React from "react";
 import { AboutCard } from "./AboutCard";
 import styled from "styled-components";
-import { media } from "../../styles/mixins";
 
 export const AboutCardContainer: React.FC = () => {
   return (

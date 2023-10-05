@@ -31,13 +31,7 @@ export const AboutCardContainer: React.FC = () => {
 };
 
 const CardsWrap = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
-
-  ${media.md`
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-  `}
 `;

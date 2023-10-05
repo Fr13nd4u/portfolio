@@ -2,7 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 
 export const Projects: React.FC = () => {
-  return <ProjectsWrap id="projects">Projects</ProjectsWrap>;
+  return <ProjectsWrap id="projects">projects</ProjectsWrap>;
 };
 
 const ProjectsWrap = styled.section`

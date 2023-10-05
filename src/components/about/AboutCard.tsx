@@ -17,6 +17,9 @@ export const AboutCard: React.FC<ICard> = ({ title, children }) => {
 };
 
 const CardWrap = styled.div`
+  flex-grow: 1;
+  flex-basis: 300px;
+
   border-radius: 1rem;
   padding: 1rem 1.5rem;
   background: ${theme.main.opacities.tertiary_light};

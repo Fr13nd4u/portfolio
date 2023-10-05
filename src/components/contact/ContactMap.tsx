@@ -1,5 +1,4 @@
 import * as React from "react";
-import styled from "styled-components";
 import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 
 export const ContactMap: React.FC = () => {

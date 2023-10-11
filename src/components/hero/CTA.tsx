@@ -6,7 +6,7 @@ import { Link } from "../shared/Link";
 export const CTA: React.FC = () => {
   return (
     <Wrap>
-      <Link variant="primary" href={CV} download>
+      <Link variant="primary" href={CV} download animated>
         Download CV
       </Link>
       <Link variant="secondary" href="#contact">

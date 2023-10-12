@@ -20,7 +20,7 @@ export const About: React.FC = () => {
           <ContentBody>
             <p>
               In addition to being a passionate and skilled front-end developer
-              based in Zhytomyr, Ukraine, I have two years of professional
+              based in Kyiv, Ukraine, I have two years of professional
               experience in crafting engaging and user-friendly web applications
               using cutting-edge technologies.
             </p>

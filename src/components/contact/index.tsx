@@ -20,13 +20,14 @@ export const Contact: React.FC = () => {
 
 const ContactWrap = styled.section`
   width: 100%;
-  min-height: 100vh;
+  padding: 2rem 0;
 `;
 
 const Content = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   gap: 1.5rem;
+  margin: 1rem 0;
 
   ${media.xl`
     flex-direction: row;

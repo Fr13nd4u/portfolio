@@ -38,11 +38,8 @@ export const Link: React.FC<ILink> = ({
 const LinkWrap = styled.a<ILink>`
   padding: 0.75rem 1.2rem;
   border-radius: 50px;
-
-  span {
-    position: relative;
-    z-index: 1;
-  }
+  font-weight: 500;
+  min-width: 150px;
 
   ${(p) => {
     switch (p.variant) {
@@ -72,6 +69,11 @@ const AnimatedLink = styled(LinkWrap)`
   overflow: hidden;
   border: none;
 
+  span {
+    position: relative;
+    z-index: 1;
+  }
+
   div {
     position: absolute;
     top: -66px;
@@ -96,8 +98,8 @@ const AnimatedLink = styled(LinkWrap)`
 
     &::before {
       border-radius: 45%;
-      background: rgba(245, 245, 245, 0.9);
-      animation: animate 5s linear infinite;
+      background: ${theme.main.colors.bg};
+      animation: animate 7s linear infinite;
     }
 
     &::after {

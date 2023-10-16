@@ -12,6 +12,7 @@
 const colors = {
   white: '#fff',
   text: '#333',
+  text_error: 'rgb(204, 18, 18)',
   bg: '#f5f5f5',
   primary: '#2C3E50',
   secondary: '#FF5722',

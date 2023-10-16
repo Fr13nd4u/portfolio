@@ -22,6 +22,7 @@ const CardWrap = styled.div`
 
   border-radius: 1rem;
   padding: 1rem 1.5rem;
+  border: 1px solid ${theme.main.opacities.tertiary_dark};
   background: ${theme.main.opacities.tertiary_light};
   backdrop-filter: blur(15px);
 

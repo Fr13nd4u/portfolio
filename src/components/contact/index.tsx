@@ -4,7 +4,6 @@ import { Container } from "../shared/Container";
 import { ContactMap } from "./ContactMap";
 import { ContactForm } from "./ContactForm";
 import { media } from "../../styles/mixins";
-import { theme } from "../../styles/theme";
 
 export const Contact: React.FC = () => {
   return (

@@ -26,6 +26,16 @@ export const GlobalStyle = createGlobalStyle`
     color: ${theme.main.colors.text};
 	}
 
+	input, textarea {
+		background: transparent;
+    border: none;
+    outline: none;
+	}
+
+	textarea {
+		resize: vertical;
+	}
+
 	ul {
 		list-style: none;
 

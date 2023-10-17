@@ -14,6 +14,7 @@ import { BiMessageSquareDetail } from "react-icons/bi";
 import Field from "./Field";
 import { theme } from "../../styles/theme";
 import styled from "styled-components";
+import { media } from "../../styles/mixins";
 
 interface FormData extends FieldValues {
   name: string;
@@ -81,7 +82,7 @@ export const ContactForm: React.FC = () => {
           />
         </FieldsWrap>
 
-        <SubmitBtn>Submit</SubmitBtn>
+        <SubmitBtn>Send message</SubmitBtn>
       </Form>
     </FormWrap>
   );
@@ -105,17 +106,27 @@ const Form = styled.form`
 `;
 
 const SubmitBtn = styled.button`
-  padding: 0.75rem 1.2rem;
+  padding: 0.75rem 2rem;
   border-radius: 50px;
   font-weight: 500;
   min-width: 150px;
+  cursor: pointer;
   color: ${theme.main.colors.white};
   background: ${theme.main.colors.secondary};
   border: 1px solid ${theme.main.colors.secondary};
+
+  ${media.md`
+    width: fit-content;
+  `}
 `;
 
 const FieldsWrap = styled.div`
   display: grid;
-  width: 100%;
   gap: 1.5rem;
+
+  ${media.md`
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto;
+    gap: 2rem 1.5rem
+  `}
 `;

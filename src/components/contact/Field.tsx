@@ -2,6 +2,7 @@ import * as React from "react";
 import { UseFormRegister, FieldValues } from "react-hook-form";
 import styled from "styled-components";
 import { theme } from "../../styles/theme";
+import { media } from "../../styles/mixins";
 
 interface InputFieldProps extends React.InputHTMLAttributes<HTMLInputElement> {
   icon: React.ReactElement;
@@ -75,6 +76,12 @@ const Label = styled.label<{ isValid: boolean }>`
     background: ${(p) =>
       p.isValid ? theme.main.colors.secondary : theme.main.colors.text_error};
   }
+
+  ${media.md`
+    &:last-child {
+      grid-column: span 2 / auto;
+    }
+  `}
 `;
 
 const LabelIcon = styled.span<{ isValid: boolean }>`

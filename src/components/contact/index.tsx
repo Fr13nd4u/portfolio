@@ -21,6 +21,7 @@ export const Contact: React.FC = () => {
 const ContactWrap = styled.section`
   width: 100%;
   padding: 2rem 0;
+  min-height: 50vh;
 `;
 
 const Content = styled.div`
@@ -29,7 +30,11 @@ const Content = styled.div`
   gap: 1.5rem;
   margin: 1rem 0;
 
-  ${media.xl`
+  ${media.md`
+    gap: 3rem;
+  `}
+
+  ${media.lg`
     flex-direction: row;
   `}
 `;

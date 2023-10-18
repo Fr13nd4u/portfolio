@@ -3,16 +3,17 @@
 // const colors = {
 //   white: '#fff',
 //   text: '#333',
+//   text_error: '#800080',
 //   bg: '#fcfaef',
-//   primary: '#d8e267',
-//   secondary: '#035a53',
+//   primary: '#035a53',
+//   secondary: '#d8e267',
 //   tertiary: '#035a53',
 // }
 
 const colors = {
   white: '#fff',
   text: '#333',
-  text_error: 'rgb(204, 18, 18)',
+  text_error: '#800080',
   bg: '#f5f5f5',
   primary: '#2C3E50',
   secondary: '#FF5722',

@@ -27,9 +27,14 @@ const Content = styled.div`
   display: flex;
   flex-direction: column-reverse;
   gap: 1.5rem;
+  min-height: 75vh;
   margin: 1rem 0;
 
-  ${media.xl`
+  ${media.md`
+    gap: 3rem;
+  `}
+
+  ${media.lg`
     flex-direction: row;
   `}
 `;

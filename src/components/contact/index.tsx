@@ -21,13 +21,13 @@ export const Contact: React.FC = () => {
 const ContactWrap = styled.section`
   width: 100%;
   padding: 2rem 0;
-  min-height: 50vh;
 `;
 
 const Content = styled.div`
   display: flex;
   flex-direction: column-reverse;
   gap: 1.5rem;
+  min-height: 75vh;
   margin: 1rem 0;
 
   ${media.md`

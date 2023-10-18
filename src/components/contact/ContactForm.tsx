@@ -1,9 +1,11 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import * as React from "react";
 
 import { FieldValues, UseFormRegister, useForm } from "react-hook-form";
+import * as emailjs from "emailjs-com";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
@@ -15,6 +17,7 @@ import Field from "./Field";
 import { theme } from "../../styles/theme";
 import styled from "styled-components";
 import { media } from "../../styles/mixins";
+import LoadingSpinner from "./LoadingSpinner";
 
 interface FormData extends FieldValues {
   name: string;
@@ -32,6 +35,8 @@ const schema = yup.object().shape({
 });
 
 export const ContactForm: React.FC = () => {
+  const [loading, setLoading] = React.useState(false);
+  const formRef = React.useRef<any>();
   const form = useForm<FormData>({
     defaultValues: {
       name: "",
@@ -41,19 +46,36 @@ export const ContactForm: React.FC = () => {
     resolver: yupResolver(schema),
   });
 
-  const { register, handleSubmit, formState } = form;
-
+  const { register, handleSubmit, formState, reset } = form;
   const { errors } = formState;
 
-  const onSubmit = (data: FormData) => {
-    console.log(data);
+  const onSubmit = async () => {
+    setLoading(true);
+
+    await emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_KEY,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_KEY,
+        formRef.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log("result: ", result.status);
+          reset();
+        },
+        (error) => {
+          console.log("error: ", error.status);
+        }
+      )
+      .finally(() => setLoading(false));
   };
 
   return (
     <FormWrap>
       <h2>Get In Touch</h2>
 
-      <Form onSubmit={handleSubmit(onSubmit)} noValidate>
+      <Form ref={formRef} onSubmit={handleSubmit(onSubmit)} noValidate>
         <FieldsWrap>
           <Field
             icon={<BsPerson />}
@@ -82,7 +104,7 @@ export const ContactForm: React.FC = () => {
           />
         </FieldsWrap>
 
-        <SubmitBtn>Send message</SubmitBtn>
+        <SubmitBtn>{loading ? <LoadingSpinner /> : "Send message"}</SubmitBtn>
       </Form>
     </FormWrap>
   );
@@ -90,7 +112,8 @@ export const ContactForm: React.FC = () => {
 
 const FormWrap = styled.div`
   width: 100%;
-  min-height: 15vh;
+  height: fit-content;
+  align-self: center;
 
   h2 {
     text-align: center;

@@ -7,6 +7,6 @@ export const Projects: React.FC = () => {
 
 const ProjectsWrap = styled.section`
   width: 100%;
-  min-height: 80vh;
-  background: #9ee37d;
+  min-height: 100vh;
+  padding: 3rem 0px;
 `;

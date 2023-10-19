@@ -13,6 +13,7 @@ export const GlobalStyle = createGlobalStyle`
 	body {
 		font-family: 'Montserrat', sans-serif;
 		color: ${theme.main.colors.text};
+		background: ${theme.main.colors.bg};
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -42,4 +43,26 @@ export const GlobalStyle = createGlobalStyle`
 		padding: 0;
 		margin: 0;
 	}
+
+	/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: ${theme.main.colors.primary} transparent;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: ${theme.main.colors.primary};
+    border-radius: 25px;
+		border: 3px solid ${theme.main.colors.bg};
+  }
 `

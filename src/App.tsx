@@ -25,4 +25,5 @@ export const App: React.FC = () => {
 
 const Main = styled.main`
   background-color: ${theme.main.colors.bg};
+  overflow: hidden;
 `;

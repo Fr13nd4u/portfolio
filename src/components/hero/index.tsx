@@ -59,10 +59,14 @@ const Scroll = styled(Link)`
 
 const ImgWrap = styled.div`
   background: ${theme.main.gradients.primary};
-  width: 20rem;
+  width: 18rem;
   height: 30rem;
   margin: 2rem auto 0;
   border-radius: 10rem 10rem 0px 0px;
   overflow: hidden;
   padding: 3.5rem 1rem 1rem;
+
+  ${media.sm` 
+    width: 20rem;
+  `}
 `;

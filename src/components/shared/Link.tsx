@@ -29,13 +29,13 @@ export const Link: React.FC<ILink> = ({
   }
 
   return (
-    <LinkWrap variant={variant} {...props}>
+    <LinkStyles variant={variant} {...props}>
       {children}
-    </LinkWrap>
+    </LinkStyles>
   );
 };
 
-const LinkWrap = styled.a<ILink>`
+export const LinkStyles = styled.a<ILink>`
   padding: 0.75rem 1.2rem;
   border-radius: 50px;
   font-weight: 500;
@@ -64,7 +64,7 @@ const LinkWrap = styled.a<ILink>`
   }}
 `;
 
-const AnimatedLink = styled(LinkWrap)`
+const AnimatedLink = styled(LinkStyles)`
   position: relative;
   overflow: hidden;
   border: none;

@@ -5,17 +5,20 @@ interface ImageProps {
   photo: {
     sm: string;
     md: string;
+    lg: string;
     alt: string;
   };
 }
 
 const Image: React.FC<ImageProps> = ({ photo }) => {
-  const { sm, md, alt } = photo;
+  const { sm, md, lg, alt } = photo;
 
   return (
     <picture>
-      <source media="(min-width: 768px)" srcSet={md} />
-      <Img src={sm} alt={alt} />
+      <source media="(min-width: 1024px)" srcSet={lg} />
+      <source media="(min-width: 600px)" srcSet={md} />
+      <source srcSet={sm} />
+      <Img src={lg} alt={alt} />
     </picture>
   );
 };

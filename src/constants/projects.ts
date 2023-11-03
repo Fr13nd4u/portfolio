@@ -1,5 +1,6 @@
-import petspaw from '../assets/projects/pets-paw.jpg'
 import petspaw_sm from '../assets/projects/pets-paw-sm.jpg'
+import petspaw_md from '../assets/projects/pets-paw-md.jpg'
+import petspaw_lg from '../assets/projects/pets-paw.jpg'
 
 
 export interface IProject {
@@ -9,6 +10,7 @@ export interface IProject {
   photo: {
     sm: string;
     md: string;
+    lg: string;
     alt: string;
   };
   stack: string[];
@@ -23,7 +25,8 @@ export const projects: IProject[] = [
     description: "Pets Paw description",
     photo: {
       sm: petspaw_sm,
-      md: petspaw,
+      md: petspaw_md,
+      lg: petspaw_lg,
       alt: "pets-paw",
     },
     stack: ['React'],
@@ -36,7 +39,8 @@ export const projects: IProject[] = [
     description: "Pets Paw 2 description",
     photo: {
       sm: petspaw_sm,
-      md: petspaw,
+      md: petspaw_md,
+      lg: petspaw_lg,
       alt: "pets-paw",
     },
     stack: ['React'],

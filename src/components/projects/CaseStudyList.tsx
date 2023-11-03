@@ -2,7 +2,6 @@ import * as React from "react";
 import CaseStudyCard from "./CaseStudyCard";
 
 import styled from "styled-components";
-import { theme } from "../../styles/theme";
 import { projects } from "../../constants/projects";
 
 const CaseStudyList: React.FC = () => {

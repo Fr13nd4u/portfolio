@@ -18,9 +18,9 @@ export const Hero: React.FC = () => {
 
       <CTA />
 
-      <Scroll variant="outline" href="#contact">
+      <ScrollDown variant="outline" href="#contact">
         Scroll Down
-      </Scroll>
+      </ScrollDown>
 
       <Socials />
       <ImgWrap>
@@ -44,7 +44,7 @@ const HeroWrap = styled.section`
   }
 `;
 
-const Scroll = styled(Link)`
+const ScrollDown = styled(Link)`
   display: none;
 
   ${media.md`
@@ -59,10 +59,18 @@ const Scroll = styled(Link)`
 
 const ImgWrap = styled.div`
   background: ${theme.main.gradients.primary};
-  width: 20rem;
+  width: 18rem;
   height: 30rem;
   margin: 2rem auto 0;
   border-radius: 10rem 10rem 0px 0px;
   overflow: hidden;
   padding: 3.5rem 1rem 1rem;
+
+  img {
+    width: 100%;
+  }
+
+  ${media.sm` 
+    width: 20rem;
+  `}
 `;

@@ -26,6 +26,7 @@ const gradients = {
 }
 
 const opacities = {
+  primary_dark: colors.primary + '80',
   secondary_dark: colors.secondary + '80',
   tertiary_light: colors.tertiary + '1f',
   tertiary_dark: colors.tertiary + '80',
